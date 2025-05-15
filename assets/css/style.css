@@ -50,6 +50,24 @@ a {
     opacity: 0.9;
 }
 
+
+.section-heading {
+    color: #10375C;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2; /* 120% */
+    letter-spacing: -1px;
+}
+
+.section-desc {
+    margin-top: 18px;
+    color: #575F66;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67; /* 166.667% */
+}
+
+
 /* =========================== HEADER */
 
 .header {
@@ -118,6 +136,7 @@ a {
     display: flex;
     align-items: center;
     padding-top: 76px;
+    padding-bottom: 110px;
 }
 
 .hero__content {
@@ -138,9 +157,9 @@ a {
 }
 
 .hero__desc {
+    margin-top: 22px;
     color: #C9D2DA;
-    font-size: 18px;
-    font-style: normal;
+    font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.67; /* 166.667% */
 }
@@ -182,4 +201,93 @@ a {
 .hero__img--small {
     width: 210px;
     height: 410px;
+}
+
+/* ============================== Service */
+
+.service {
+    padding: 170px 0;
+    background: cyan;
+}
+
+.service__heading, 
+.service__desc {
+     text-align: center;
+}
+
+.service__desc {
+    /* Đây là kiến thức 14:01 */
+    width: 468px;
+    margin: 0 auto;
+}
+
+.service__row {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service__img {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.service-item {
+
+    padding: 21px;
+    display: flex;
+    width: 470px;
+    border-radius: 10px;
+    background: #fff;
+    /* Hiệu ưng làm chậm */
+    transition: 0.25s;
+}
+
+.service-item:hover {
+
+    position: relative;
+    /* box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05); */
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 1);
+}
+
+.service-item:hover .service-item__icon {
+    color: #fff;
+    background: #2e80ce;
+}
+
+.service-item__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: #eff6fd;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 19px;
+    transition: 0.25s;
+}
+
+.service-item__heading {
+    color: #10375C;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.service-item__desc {
+    margin-top: 8px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+
+.service__btn {
+    margin-top: 55px;
 }
