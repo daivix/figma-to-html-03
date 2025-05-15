@@ -67,6 +67,36 @@ a {
     line-height: 1.67; /* 166.667% */
 }
 
+.control {
+    display: flex;
+    column-gap: 18px;
+    align-items: center;
+}
+
+.control__btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #575F66;
+    background: #fff;
+    cursor: pointer;
+    /* Chạy chậm hợp lý */
+    transition: 0.25s;
+}
+
+.control__btn:hover {
+    background: #2E80CE;
+    border-color: #2E80CE;
+    color: #fff;
+}
+
+.control-icon--next {
+    /* Đảo ngược chiều */
+    rotate: 180deg;
+}
 
 /* =========================== HEADER */
 
@@ -409,4 +439,73 @@ a {
 
 .about-content__btn {
     margin-top: 38px;
+}
+
+/* ==========================Team */
+
+.team {
+    padding: 85px 0;
+}
+
+.team-header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.team__cta {
+    margin-top: 38px;
+}
+
+.team__list {
+    margin-top: 70px;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.team-item__thumb {
+    height: 290px; 
+    max-width: 100%;
+    object-fit: cover;
+    
+    /* Thẻ img là thẻ inline sẽ luôn nó nét thừa bên ngoài nên chuyển sang block để mất đi nét thừa 12:06 
+    - Để hiệu ứng chậm transition 
+    + Sử dụng vào chính thẻ cần tác dụng team-item__thumb
+    */
+    display: block;
+    transition: 0.5s;
+}
+
+.team-item__img-bg {
+    border-radius: 6px;
+    background: #EAF6FF;
+    padding-top: 28px;
+    /* Trường hợp bị trồi ra ngoài
+     - Các trường hợp nào hay bị trồi ra ngoài ?
+    */
+    overflow: hidden;
+}
+
+/* Khi tác động vào team-item thì team-item__thumb phản hồi */
+.team-item:hover .team-item__thumb {
+    transform: scale(1.1);
+}
+
+.team-item__name {
+    color: #10375C;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.75; /* 175% */
+}
+
+.team-item__desc {
+    color: #575F66;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+
+.team__control {
+    margin-top: 38px;
+    justify-content: center;
 }
